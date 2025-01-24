@@ -19,7 +19,7 @@ def main(players_stats_filepath, tournaments_count=10000):
     simulation_manager = SimulationManager(players_stats)
 
     logger.info("Playing tournaments...")
-    for _ in range(tournaments_count + 1):
+    for _ in range(tournaments_count):
         tournament = Tournament(players_stats)
         tournament.play()
         tournament_result = tournament.get_results()
